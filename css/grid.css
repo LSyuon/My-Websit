@@ -1,0 +1,63 @@
+.gridBox {
+  width: 100%;
+  font-size: 0;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+.gridBox.boxCenter .gridCell {
+  vertical-align: middle;
+}
+.gridBox > .gridCell {
+  display: inline-block;
+  width: 100%;
+  box-sizing: border-box;
+  transition: width 1s;
+}
+.gridBox > .cell_2 {
+  width: 20%;
+}
+.gridBox > .cell_3 {
+  width: 30%;
+}
+.gridBox > .cell_4 {
+  width: 40%;
+}
+.gridBox > .cell_5 {
+  width: 50%;
+}
+.gridBox > .cell_6 {
+  width: 60%;
+}
+.gridBox > .cell_7 {
+  width: 70%;
+}
+.gridBox > .cell_8 {
+  width: 80%;
+}
+.gridBox > .cell_9 {
+  width: 90%;
+}
+.gridBox > .cell_22 {
+  width: calc(100% / 2);
+}
+.gridBox > .cell_33 {
+  width: calc(100% / 3);
+}
+.gridBox > .cell_44 {
+  width: calc(100% / 4);
+}
+.gridBox > .cell_55 {
+  width: calc(100% / 5);
+}
+.gridBox > .cell_66 {
+  width: calc(100% / 6);
+}
+.gridBox > .cell_77 {
+  width: calc(100% / 7);
+}
+.gridBox > .cell_88 {
+  width: calc(100% / 8);
+}
+.gridBox > .cell_99 {
+  width: calc(100% / 9);
+}
