@@ -1,0 +1,46 @@
+@rootSize: 120rem;
+
+.companyTitle {
+
+    >.gridBox {
+
+        >.gridCell {
+            padding: 20px 0;
+
+            &:nth-child(1) {
+
+                .title {
+                    font-size: 20px;
+                }
+
+                .title2 {
+                    font-size: 14px;
+                }
+            }
+
+            &:nth-child(2) {
+                >.gridBox {
+                    >.gridCell {
+                        &:nth-child(1) {
+                            width: 40px;
+
+                            >.iconfont {
+                                font-size: 36px;
+                            }
+                        }
+
+                        &:nth-child(2) {
+                            width: calc(100% - 40px);
+                            padding-left: 5px;
+
+                            h2 {
+                                font-size: 38px;
+                            }
+                        }
+
+                    }
+                }
+            }
+        }
+    }
+}

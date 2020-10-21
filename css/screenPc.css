@@ -1,46 +1,22 @@
-@rootSize: 120rem;
-
-.companyTitle {
-
-    >.gridBox {
-
-        >.gridCell {
-            padding: 20px 0;
-
-            &:nth-child(1) {
-
-                .title {
-                    font-size: 20px;
-                }
-
-                .title2 {
-                    font-size: 14px;
-                }
-            }
-
-            &:nth-child(2) {
-                >.gridBox {
-                    >.gridCell {
-                        &:nth-child(1) {
-                            width: 40px;
-
-                            >.iconfont {
-                                font-size: 36px;
-                            }
-                        }
-
-                        &:nth-child(2) {
-                            width: calc(100% - 40px);
-                            padding-left: 5px;
-
-                            h2 {
-                                font-size: 38px;
-                            }
-                        }
-
-                    }
-                }
-            }
-        }
-    }
+.companyTitle > .gridBox > .gridCell {
+  padding: 20px 0;
+}
+.companyTitle > .gridBox > .gridCell:nth-child(1) .title {
+  font-size: 20px;
+}
+.companyTitle > .gridBox > .gridCell:nth-child(1) .title2 {
+  font-size: 14px;
+}
+.companyTitle > .gridBox > .gridCell:nth-child(2) > .gridBox > .gridCell:nth-child(1) {
+  width: 40px;
+}
+.companyTitle > .gridBox > .gridCell:nth-child(2) > .gridBox > .gridCell:nth-child(1) > .iconfont {
+  font-size: 36px;
+}
+.companyTitle > .gridBox > .gridCell:nth-child(2) > .gridBox > .gridCell:nth-child(2) {
+  width: calc(100% - 40px);
+  padding-left: 5px;
+}
+.companyTitle > .gridBox > .gridCell:nth-child(2) > .gridBox > .gridCell:nth-child(2) h2 {
+  font-size: 38px;
 }
