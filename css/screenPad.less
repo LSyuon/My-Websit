@@ -1,1 +1,45 @@
-@rootSize: 140rem;
+@rootSize: 120rem;
+
+.companyTitle {
+
+    >.gridBox {
+
+        >.gridCell {
+            padding: 20/@rootSize 0;
+
+            &:nth-child(1) {
+
+                .title {
+                    font-size: 20 / @rootSize;
+                }
+                .title2 {
+                    font-size: 14 / @rootSize;
+                }
+            }
+
+            &:nth-child(2) {
+                >.gridBox {
+                    >.gridCell {
+                        &:nth-child(1) {
+                            width: 40 / @rootSize;
+
+                            >.iconfont {
+                                font-size: 36 / @rootSize;
+                            }
+                        }
+
+                        &:nth-child(2) {
+                            width: calc(100% - 0.33333333rem);
+                            padding-left: 5 / @rootSize;
+
+                            h2 {
+                                font-size: 32 / @rootSize;
+                            }
+                        }
+
+                    }
+                }
+            }
+        }
+    }
+}

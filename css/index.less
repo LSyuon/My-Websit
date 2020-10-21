@@ -119,6 +119,7 @@ header {
                                 box-sizing: border-box;
                                 height: 40px;
                                 border: none;
+                                vertical-align: middle;
                             }
 
                             >.searchBtn {
@@ -130,6 +131,7 @@ header {
                                 background-color: #ff7f27;
                                 background-color: var(--btnColor);
                                 transition: background .4s ease;
+                                vertical-align: middle;
 
                                 &:hover {
                                     background-color: #444444;
@@ -214,6 +216,10 @@ header {
                     transition: all .2s .3s;
                 }
 
+                &:last-child > .yjTitle{
+                    border-right: 1px solid #ddd;
+                }
+
                 .yjTitle {
                     display: block;
                     text-align: center;
@@ -227,10 +233,6 @@ header {
                     text-overflow: ellipsis;
                     -webkit-transition: all .4s ease;
                     transition: all .4s ease;
-
-                    &:last-child {
-                        border-right: 1px solid #ddd;
-                    }
 
                     &:hover {
                         color: #fff;
@@ -322,7 +324,6 @@ main {
             overflow: visible;
 
             >.gridCell {
-                padding: 20px 0;
 
                 &:nth-child(1) {
                     width: 60%;
@@ -344,11 +345,9 @@ main {
                     }
 
                     .title {
-                        font-size: 20px;
                     }
 
                     .title2 {
-                        font-size: 14px;
                     }
                 }
 
@@ -377,23 +376,18 @@ main {
 
                         >.gridCell {
                             &:nth-child(1) {
-                                width: 40px;
 
                                 >.iconfont {
                                     display: inline-block;
                                     box-sizing: border-box;
-                                    font-size: 36px;
                                     color: #fff;
                                 }
                             }
 
                             &:nth-child(2) {
-                                width: calc(100% - 40px);
-                                padding-left: 5px;
 
                                 h2 {
                                     font-weight: normal;
-                                    font-size: 38px;
                                     color: #ffffff;
                                 }
                             }
@@ -412,11 +406,15 @@ main {
                     font-size: 0;
 
                     >li.nav_item {
+                        position: relative;
                         display: inline-block;
                         width: calc(100% / 4);
-                        padding: 0 5px;
+                        vertical-align: bottom;
+                        padding: 0 0px;
                         box-sizing: border-box;
                         font-size: 20px;
+                        border-left:1px solid #ccc;
+                        overflow:hidden;
 
                         &:first-child {
                             padding-left: 0px;
@@ -424,31 +422,47 @@ main {
 
                         &:last-child {
                             padding-right: 0px;
+                            border-right:1px solid #ccc;
                         }
 
+                        &:hover .tab_link.hover{
+                            top:0;
+                        }
 
-                        >a {
+                        >a.tab_link {
                             display: block;
                             text-align: center;
-                            padding: 0 5px;
-                            line-height: 60px;
-                            background-color: #ececec;
-                            transition: all .4s ease;
-                            color: @mainColor;
-                            color: var(--mainColor);
+                            padding: 20px 5px;
+                            box-sizing:border-box;
+                            transition: all .4s ease-in-out;
+                            color: #333;
+                            border-bottom:3px solid @btnColor;
+                            border-color:var(--btnColor);
+                            background-color:#fff;
 
                             &:active {
-                                background-color: @mainColor;
-                                background-color: var(--mainColor);
-                                color: #fff;
                             }
 
                             &:hover {
-                                background-color: @mainColor;
-                                background-color: var(--mainColor);
-                                color: #fff;
+                            }
+
+                            >h3{
+                                font-size:18px;
+                                font-weight:normal;
+                            }
+                            >p{
+                                margin-top:5px;
+                                font-size:14px;
+                            }
+
+                            &.hover{
+                                position:absolute;
+                                top:-100%;
+                                left:0;
+                                width:100%;
                             }
                         }
+                        
                     }
                 }
 
@@ -459,7 +473,89 @@ main {
                         display: none;
 
                         &:first-child {
-                            display:block;
+                            display: block;
+                        }
+
+                        /*产品列表*/
+                        .proList {
+                            font-size: 0;
+
+                            >.proItem {
+                                display: inline-block;
+                                width: calc((100% - 60px) / 3);
+                                margin-right: 30px;
+                                margin-bottom: 30px;
+                                overflow: hidden;
+
+                                &:nth-child(n+3) {
+                                    margin-right: 0;
+                                }
+
+                                >.proBox {
+                                    background-color: #fff;
+                                    transition: all ease-in-out .3s;
+
+                                    &:hover {
+                                        background-color: @btnColor;
+                                        background-color: var(--btnColor);
+                                    }
+
+                                    &:hover>.imgBox {
+                                        transform: translateY(-7%);
+                                    }
+
+                                    &:hover>.contentBox>.slideBox>.textBox .proTitle {
+                                        color: #fff;
+                                        transform: translateY(-60%);
+                                    }
+
+                                    &:hover>.contentBox>.slideBox>.textBox .proBtn {
+                                        background-color: #fff;
+                                        color: @btnColor;
+                                        color: var(--btnColor);
+                                    }
+
+                                    >.imgBox {
+                                        height: 0;
+                                        padding-bottom: 100%;
+                                        overflow: hidden;
+                                        transition: all ease-in-out .3s;
+
+                                        img {
+                                            width: 100%;
+                                        }
+                                    }
+
+                                    >.contentBox {
+                                        >.slideBox {
+                                            padding: 5% 0;
+
+                                            >.textBox {
+                                                h3 {
+                                                    font-size: 16px;
+                                                    font-weight: normal;
+                                                    text-align: center;
+                                                    transition: all ease-in-out .3s;
+
+                                                }
+
+                                                a.proBtn {
+                                                    display: block;
+                                                    width: 20px;
+                                                    margin: 3% auto 0;
+                                                    font-size: 14px;
+                                                    line-height: 20px;
+                                                    text-align: center;
+                                                    border-radius: 100%;
+                                                    background-color: #ff7f27;
+                                                    background-color: var(--btnColor);
+                                                    transition: all ease-in-out .3s;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
                         }
                     }
                 }
@@ -502,7 +598,11 @@ footer {
 
                             >li {
                                 display: inline-block;
-                                width: calc(100% / 8);
+                                width: calc(100% / 7);
+
+                                &:first-child{
+                                    display:none;
+                                }
 
                                 >.yjTitle {
                                     font-size: 16px;

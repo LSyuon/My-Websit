@@ -1,0 +1,22 @@
+.companyTitle > .gridBox > .gridCell {
+  padding: 0.16666667rem 0;
+}
+.companyTitle > .gridBox > .gridCell:nth-child(1) .title {
+  font-size: 0.16666667rem;
+}
+.companyTitle > .gridBox > .gridCell:nth-child(1) .title2 {
+  font-size: 0.11666667rem;
+}
+.companyTitle > .gridBox > .gridCell:nth-child(2) > .gridBox > .gridCell:nth-child(1) {
+  width: 0.33333333rem;
+}
+.companyTitle > .gridBox > .gridCell:nth-child(2) > .gridBox > .gridCell:nth-child(1) > .iconfont {
+  font-size: 0.3rem;
+}
+.companyTitle > .gridBox > .gridCell:nth-child(2) > .gridBox > .gridCell:nth-child(2) {
+  width: calc(100% - 0.33333333rem);
+  padding-left: 0.04166667rem;
+}
+.companyTitle > .gridBox > .gridCell:nth-child(2) > .gridBox > .gridCell:nth-child(2) h2 {
+  font-size: 0.26666667rem;
+}
