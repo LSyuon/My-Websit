@@ -23,3 +23,6 @@
 .companyTitle > .gridBox > .gridCell:nth-child(2) > .gridBox > .gridCell:nth-child(2) h2 {
   font-size: 38px;
 }
+.phone_nav {
+  display: none;
+}

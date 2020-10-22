@@ -154,6 +154,7 @@ let componentModule = {
                                         </div>
                                     </div>
                                 </div>
+                                <a :href="item.url" class="proLink"></a>
                             </div>
                         </div>
                     </div>
