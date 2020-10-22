@@ -1,10 +1,6 @@
 let websitData = {
     "menu":[
-        {"name":"首页","url":"javascript:;","children":[
-            {"name":null,"url":null,"children":[
-                {"name":null,"url":null}
-            ]}
-        ]},
+        {"name":"首页","url":"javascript:;","children":null},
         {"name":"关于我们","url":"javascript:;","children":[
             {"name":"公司简介","url":"javascript:;","children":[
                 {"name":null,"url":null}
@@ -63,17 +59,7 @@ let websitData = {
                 {"name":null,"url":null}
             ]},
         ]},
-        {"name":"在线留言","url":"javascript:;","children":[
-            {"name":"产品分类","url":"javascript:;","children":[
-                {"name":null,"url":null}
-            ]},
-            {"name":"产品分类","url":"javascript:;","children":[
-                {"name":null,"url":null}
-            ]},
-            {"name":"产品分类","url":"javascript:;","children":[
-                {"name":null,"url":null}
-            ]},
-        ]},
+        {"name":"在线留言","url":"javascript:;","children":null},
         {"name":"联系我们","url":"javascript:;","children":[
             {"name":"产品分类","url":"javascript:;","children":[
                 {"name":null,"url":null}
@@ -100,4 +86,12 @@ let websitData = {
         {"name":"螺杆式空压机BP05","summary":null,"url":"javascript:;","image":"img/pro1.jpg"},
         {"name":"螺杆式空压机BP06","summary":null,"url":"javascript:;","image":"img/pro1.jpg"},
     ],
+    "proList2":[
+        {"name":"螺杆式空压机BP01","summary":null,"url":"javascript:;","image":"img/pro2.jpg"},
+        {"name":"螺杆式空压机BP02","summary":null,"url":"javascript:;","image":"img/pro2.jpg"},
+        {"name":"螺杆式空压机BP03","summary":null,"url":"javascript:;","image":"img/pro2.jpg"},
+        {"name":"螺杆式空压机BP04","summary":null,"url":"javascript:;","image":"img/pro2.jpg"},
+        {"name":"螺杆式空压机BP05","summary":null,"url":"javascript:;","image":"img/pro2.jpg"},
+        {"name":"螺杆式空压机BP06","summary":null,"url":"javascript:;","image":"img/pro2.jpg"},
+    ]
 }

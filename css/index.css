@@ -252,7 +252,6 @@ main .companyTitle > .gridBox {
   overflow: visible;
 }
 main .companyTitle > .gridBox > .gridCell:nth-child(1) {
-  width: 60%;
   position: relative;
   background-color: #005ad2;
   background-color: var(--mainColor);
@@ -270,7 +269,6 @@ main .companyTitle > .gridBox > .gridCell:nth-child(1):before {
   background-color: var(--mainColor);
 }
 main .companyTitle > .gridBox > .gridCell:nth-child(2) {
-  width: 40%;
   position: relative;
   background-color: #333333;
   background-color: var(--assistColor);
@@ -285,11 +283,6 @@ main .companyTitle > .gridBox > .gridCell:nth-child(2):before {
   height: 100%;
   background-color: #333333;
   background-color: var(--assistColor);
-}
-main .companyTitle > .gridBox > .gridCell:nth-child(2) > .gridBox {
-  max-width: 320px;
-  margin-left: auto;
-  margin-right: 0;
 }
 main .companyTitle > .gridBox > .gridCell:nth-child(2) > .gridBox > .gridCell:nth-child(1) > .iconfont {
   display: inline-block;
@@ -364,13 +357,7 @@ main .proList > .pageContent > .tabBox > .tabContent > .content_item .proList {
 }
 main .proList > .pageContent > .tabBox > .tabContent > .content_item .proList > .proItem {
   display: inline-block;
-  width: calc((100% - 60px) / 3);
-  margin-right: 30px;
-  margin-bottom: 30px;
   overflow: hidden;
-}
-main .proList > .pageContent > .tabBox > .tabContent > .content_item .proList > .proItem:nth-child(n+3) {
-  margin-right: 0;
 }
 main .proList > .pageContent > .tabBox > .tabContent > .content_item .proList > .proItem > .proBox {
   background-color: #fff;
@@ -450,9 +437,15 @@ footer > .main > .gridBox > .gridCell:nth-child(2) > .footerNav > .yjBox {
 }
 footer > .main > .gridBox > .gridCell:nth-child(2) > .footerNav > .yjBox > li {
   display: inline-block;
-  width: calc(100% / 7);
+  width: calc(100% / 5);
 }
 footer > .main > .gridBox > .gridCell:nth-child(2) > .footerNav > .yjBox > li:first-child {
+  display: none;
+}
+footer > .main > .gridBox > .gridCell:nth-child(2) > .footerNav > .yjBox > li:nth-last-child(2) {
+  display: none;
+}
+footer > .main > .gridBox > .gridCell:nth-child(2) > .footerNav > .yjBox > li:last-child {
   display: none;
 }
 footer > .main > .gridBox > .gridCell:nth-child(2) > .footerNav > .yjBox > li > .yjTitle {

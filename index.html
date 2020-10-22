@@ -8,11 +8,13 @@
     <title>企业官网</title>
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/sreenPcPad.css" media="screen and (min-width:769px)">
     <link rel="stylesheet" href="css/screenPc.css" media="screen and (min-width:1201px)">
     <link rel="stylesheet" href="css/screenPad.css" media="screen and (min-width: 769px) and (max-width: 1200px)">
     <link rel="stylesheet" href="css/screenMo.css" media="screen and (max-width: 768px)">
     <link rel="stylesheet" href="icon/iconfont.css">
     <link rel="stylesheet" href="css/swiper-bundle.min.css">
+    <script src="js/jquery.min.js"></script>
     <script src="js/swiper-bundle.min.js"></script>
     <script src="js/vue.js"></script>
     <script src="js/data.js"></script>
@@ -25,7 +27,7 @@
         <header>
             <div class="welcome">
                 <div class="gridBox boxCenter pageContent">
-                    <div class="cell_22 gridCell"><span>还原光临~企业官网！</span></div>
+                    <div class="cell_22 gridCell"><span>欢迎光临~企业官网！</span></div>
                     <div class="cell_22 gridCell">
                         <span class="choose">语言选择：</span>
                         <ul class="language">
@@ -64,6 +66,11 @@
                 </div>
             </div>
             <pc-nav :data="websitData.menu"></pc-nav>
+            <div class="phone_nav pageContent">
+                <a href="javascript:;" class="navLog">导航菜单</a>
+                <mo-nav :data="websitData.menu"></mo-nav>
+                <i class="iconfont">&#xe600;</i>
+            </div>
         </header>
         <main>
             <div class="banner">
@@ -103,7 +110,7 @@
             </div>
             <div class="proList">
                 <div class="pageContent">
-                    <pro-list :pro-class="websitData.proClass" :pro-list="websitData.proList"></pro-list>
+                    <pro-list :pro-class="websitData.proClass" :pro-list="websitData.proList" :pro-list2="websitData.proList2"></pro-list>
                 </div>
             </div>
         </main>
@@ -112,7 +119,7 @@
                 <div class="gridBox pageContent">
                     <div class="gridCell">
                         <div class="contactBox">
-                            <div class="gridBox boxCenter pageContent">
+                            <div class="gridBox boxCenter">
                                 <div class="gridCell">
                                     <p>联系人：廖先生</p>
                                     <p><a href="tel:13512341234">手机：13512341234</a></p>
@@ -147,12 +154,17 @@
         var vm = new Vue({
             el: '.pageBox',
             data: {
-                websitData
+                websitData,
+                moNavShow: function () {
+                    document.querySelector('header .mo_navBox').style.display = "block";
+                    document.querySelector('header .mo_navBox').classList.remove('hide');
+                }
             },
             components: {
                 'pc-nav': componentModule.pcNav,
                 'pro-list': componentModule.tabNav,
                 'footer-nav': componentModule.footerNav,
+                'mo-nav': componentModule.moNav
             }
         })
     </script>
@@ -176,17 +188,43 @@
         })
     </script>
     <script>
-        window.addEventListener('load', function () {
+        //切换标签
+        function tabNav() {
             let tabItem = document.querySelectorAll('.tabBox > .tabNav > li.nav_item');
             let tabContent = document.querySelectorAll('.tabBox > .tabContent > .content_item');
             tabItem.forEach((item, index) => {
-                item.addEventListener('click', function () {
+                item.addEventListener('mouseenter', function () {
                     tabContent.forEach(item => {
                         item.style.display = "none";
                     });
                     tabContent[index].style.display = "block";
                 })
             });
+        }
+
+        //超出隐藏
+        function saHeightAuto(eleList, line, second) {
+            document.querySelectorAll(eleList).forEach(item => {
+                let initialHeight = item.offsetHeight;
+                item.style.cssText = "display: -webkit-box;-webkit-line-clamp:" + line + ";-webkit-box-orient: vertical;text-overflow: ellipsis;overflow: hidden;transition-property: all;transition-duration:" + second + "s;";
+                let minHeights = item.offsetHeight;
+                item.style.height = minHeights + "px";
+                item.addEventListener('mouseenter', function () {
+                    this.style.cssText = "display:block;transition-duration:" + second + "s;height:" + initialHeight + "px;";
+                })
+                item.addEventListener('mouseout', function () {
+                    this.style.cssText = "display: -webkit-box;-webkit-line-clamp:" + line + ";-webkit-box-orient: vertical;text-overflow: ellipsis;overflow: hidden;transition-property: all;transition-duration:" + second + "s;height:" + minHeights + "px";
+                })
+            })
+        }
+
+        window.addEventListener('load', function () {
+            tabNav();
+            saHeightAuto('main .proList > .pageContent > .tabBox > .tabNav > li.nav_item > a.tab_link > h3', 1, 0.5);
+            saHeightAuto('main .proList > .pageContent > .tabBox > .tabNav > li.nav_item > a.tab_link > p', 1, 0.5);
+            $('header .phone_nav > .iconfont').click(function(){
+                $('header .titleHeader > .gridBox > .gridCell:nth-child(2)').slideToggle();
+            })
         })
     </script>
 </body>

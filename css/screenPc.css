@@ -7,6 +7,9 @@
 .companyTitle > .gridBox > .gridCell:nth-child(1) .title2 {
   font-size: 14px;
 }
+.companyTitle > .gridBox > .gridCell:nth-child(2) {
+  padding-left: 10px;
+}
 .companyTitle > .gridBox > .gridCell:nth-child(2) > .gridBox > .gridCell:nth-child(1) {
   width: 40px;
 }

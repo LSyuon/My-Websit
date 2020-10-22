@@ -1,0 +1,193 @@
+:root {
+  --mainColor: #005ad2;
+  --assistColor: #333333;
+  --btnColor: #ff7f27;
+  --contentWidth: 100%;
+  --contentMaxWidth: 1240px;
+  --contentWidthPadding: 20px;
+}
+.companyTitle > .gridBox > .gridCell:nth-child(1) {
+  width: 60%;
+}
+.companyTitle > .gridBox > .gridCell:nth-child(2) {
+  width: 40%;
+}
+.companyTitle > .gridBox > .gridCell:nth-child(2) > .gridBox {
+  max-width: 320px;
+  margin-left: auto;
+  margin-right: 0;
+}
+main .proList > .pageContent > .tabBox > .tabNav {
+  font-size: 0;
+}
+main .proList > .pageContent > .tabBox > .tabNav > li.nav_item {
+  position: relative;
+  display: inline-block;
+  width: calc(100% / 4);
+  vertical-align: bottom;
+  padding: 0 0px;
+  box-sizing: border-box;
+  font-size: 20px;
+  border-left: 1px solid #ccc;
+  overflow: hidden;
+}
+main .proList > .pageContent > .tabBox > .tabNav > li.nav_item:first-child {
+  padding-left: 0px;
+}
+main .proList > .pageContent > .tabBox > .tabNav > li.nav_item:last-child {
+  padding-right: 0px;
+  border-right: 1px solid #ccc;
+}
+main .proList > .pageContent > .tabBox > .tabNav > li.nav_item:hover .tab_link.hover {
+  top: 0;
+}
+main .proList > .pageContent > .tabBox > .tabNav > li.nav_item > a.tab_link {
+  display: block;
+  text-align: center;
+  padding: 20px 5px;
+  box-sizing: border-box;
+  transition: all 0.4s ease-in-out;
+  color: #333;
+  border-bottom: 3px solid #ff7f27;
+  border-color: var(--btnColor);
+  background-color: #fff;
+}
+main .proList > .pageContent > .tabBox > .tabNav > li.nav_item > a.tab_link > h3 {
+  font-size: 18px;
+  font-weight: normal;
+}
+main .proList > .pageContent > .tabBox > .tabNav > li.nav_item > a.tab_link > p {
+  margin-top: 5px;
+  font-size: 14px;
+}
+main .proList > .pageContent > .tabBox > .tabNav > li.nav_item > a.tab_link.hover {
+  position: absolute;
+  top: -100%;
+  left: 0;
+  width: 100%;
+}
+main .proList > .pageContent > .tabBox > .tabContent {
+  min-height: 300px;
+}
+main .proList > .pageContent > .tabBox > .tabContent > .content_item {
+  display: none;
+  /*产品列表*/
+}
+main .proList > .pageContent > .tabBox > .tabContent > .content_item:first-child {
+  display: block;
+}
+main .proList > .pageContent > .tabBox > .tabContent > .content_item .proList {
+  font-size: 0;
+}
+main .proList > .pageContent > .tabBox > .tabContent > .content_item .proList > .proItem {
+  display: inline-block;
+  width: calc((100% - 60px) / 3);
+  margin-right: 30px;
+  margin-bottom: 30px;
+  overflow: hidden;
+}
+main .proList > .pageContent > .tabBox > .tabContent > .content_item .proList > .proItem:nth-child(3n+3) {
+  margin-right: 0;
+}
+main .proList > .pageContent > .tabBox > .tabContent > .content_item .proList > .proItem > .proBox {
+  background-color: #fff;
+  transition: all ease-in-out 0.3s;
+}
+main .proList > .pageContent > .tabBox > .tabContent > .content_item .proList > .proItem > .proBox:hover {
+  background-color: #ff7f27;
+  background-color: var(--btnColor);
+}
+main .proList > .pageContent > .tabBox > .tabContent > .content_item .proList > .proItem > .proBox:hover > .imgBox {
+  transform: translateY(-7%);
+}
+main .proList > .pageContent > .tabBox > .tabContent > .content_item .proList > .proItem > .proBox:hover > .contentBox > .slideBox > .textBox .proTitle {
+  color: #fff;
+  transform: translateY(-60%);
+}
+main .proList > .pageContent > .tabBox > .tabContent > .content_item .proList > .proItem > .proBox:hover > .contentBox > .slideBox > .textBox .proBtn {
+  background-color: #fff;
+  color: #ff7f27;
+  color: var(--btnColor);
+}
+main .proList > .pageContent > .tabBox > .tabContent > .content_item .proList > .proItem > .proBox > .imgBox {
+  height: 0;
+  padding-bottom: 100%;
+  overflow: hidden;
+  transition: all ease-in-out 0.3s;
+}
+main .proList > .pageContent > .tabBox > .tabContent > .content_item .proList > .proItem > .proBox > .imgBox img {
+  width: 100%;
+}
+main .proList > .pageContent > .tabBox > .tabContent > .content_item .proList > .proItem > .proBox > .contentBox > .slideBox {
+  padding: 5% 0;
+}
+main .proList > .pageContent > .tabBox > .tabContent > .content_item .proList > .proItem > .proBox > .contentBox > .slideBox > .textBox h3 {
+  font-size: 16px;
+  font-weight: normal;
+  text-align: center;
+  transition: all ease-in-out 0.3s;
+}
+main .proList > .pageContent > .tabBox > .tabContent > .content_item .proList > .proItem > .proBox > .contentBox > .slideBox > .textBox a.proBtn {
+  display: block;
+  width: 20px;
+  margin: 3% auto 0;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: center;
+  border-radius: 100%;
+  background-color: #ff7f27;
+  background-color: var(--btnColor);
+  transition: all ease-in-out 0.3s;
+}
+footer > .main {
+  padding-top: 3%;
+  padding-bottom: 3%;
+  background-color: #333333;
+  background-color: var(--assistColor);
+}
+footer > .main > .gridBox > .gridCell {
+  vertical-align: top;
+}
+footer > .main > .gridBox > .gridCell:nth-child(1) {
+  width: 40%;
+}
+footer > .main > .gridBox > .gridCell:nth-child(1) p {
+  color: #ffffff;
+  line-height: 2;
+}
+footer > .main > .gridBox > .gridCell:nth-child(1) p a {
+  color: #fff;
+}
+footer > .main > .gridBox > .gridCell:nth-child(2) {
+  width: 60%;
+}
+footer > .main > .gridBox > .gridCell:nth-child(2) > .footerNav > .yjBox {
+  font-size: 0;
+  color: #fff;
+}
+footer > .main > .gridBox > .gridCell:nth-child(2) > .footerNav > .yjBox > li {
+  display: inline-block;
+  width: calc(100% / 5);
+}
+footer > .main > .gridBox > .gridCell:nth-child(2) > .footerNav > .yjBox > li:first-child {
+  display: none;
+}
+footer > .main > .gridBox > .gridCell:nth-child(2) > .footerNav > .yjBox > li:nth-last-child(2) {
+  display: none;
+}
+footer > .main > .gridBox > .gridCell:nth-child(2) > .footerNav > .yjBox > li:last-child {
+  display: none;
+}
+footer > .main > .gridBox > .gridCell:nth-child(2) > .footerNav > .yjBox > li > .yjTitle {
+  font-size: 16px;
+  font-weight: bold;
+}
+footer > .main > .gridBox > .gridCell:nth-child(2) > .footerNav > .yjBox > li > .slideBox > .ejBox {
+  margin-top: 15px;
+}
+footer > .main > .gridBox > .gridCell:nth-child(2) > .footerNav > .yjBox > li > .slideBox > .ejBox > li {
+  margin-top: 7px;
+}
+footer > .main > .gridBox > .gridCell:nth-child(2) > .footerNav > .yjBox > li > .slideBox > .ejBox > li > .ejTitle {
+  font-size: 14px;
+}

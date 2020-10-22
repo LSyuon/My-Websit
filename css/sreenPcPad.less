@@ -1,0 +1,287 @@
+:root {
+    --mainColor: #005ad2;
+    --assistColor: #333333;
+    --btnColor: #ff7f27;
+    --contentWidth: 100%;
+    --contentMaxWidth: 1240px;
+    --contentWidthPadding: 20px;
+}
+
+@mainColor: #005ad2;
+@assistColor: #333333;
+@btnColor: #ff7f27;
+@contentWidth: 100%;
+@contentMaxWidth: 1240px;
+@contentWidthPadding: 20px;
+
+@navHeight: 60px;
+
+@animateTime: 1.5s;
+@animateDelay: 0.5s;
+@animateInterval: 0.3;
+
+
+
+.companyTitle {
+
+    >.gridBox {
+
+        >.gridCell {
+
+            &:nth-child(1) {
+                width: 60%;
+            }
+
+            &:nth-child(2) {
+                width: 40%;
+
+                >.gridBox {
+                    max-width: 320px;
+                    margin-left: auto;
+                    margin-right: 0;
+                }
+            }
+        }
+    }
+}
+
+main{
+    .proList {
+        >.pageContent {
+            >.tabBox {
+                >.tabNav {
+                    font-size: 0;
+
+                    >li.nav_item {
+                        position: relative;
+                        display: inline-block;
+                        width: calc(100% / 4);
+                        vertical-align: bottom;
+                        padding: 0 0px;
+                        box-sizing: border-box;
+                        font-size: 20px;
+                        border-left:1px solid #ccc;
+                        overflow:hidden;
+
+                        &:first-child {
+                            padding-left: 0px;
+                        }
+
+                        &:last-child {
+                            padding-right: 0px;
+                            border-right:1px solid #ccc;
+                        }
+
+                        &:hover .tab_link.hover{
+                            top:0;
+                        }
+
+                        >a.tab_link {
+                            display: block;
+                            text-align: center;
+                            padding: 20px 5px;
+                            box-sizing:border-box;
+                            transition: all .4s ease-in-out;
+                            color: #333;
+                            border-bottom:3px solid @btnColor;
+                            border-color:var(--btnColor);
+                            background-color:#fff;
+
+                            &:active {
+                            }
+
+                            &:hover {
+                            }
+
+                            >h3{
+                                font-size:18px;
+                                font-weight:normal;
+                            }
+                            >p{
+                                margin-top:5px;
+                                font-size:14px;
+                            }
+
+                            &.hover{
+                                position:absolute;
+                                top:-100%;
+                                left:0;
+                                width:100%;
+                            }
+                        }
+                        
+                    }
+                }
+
+                >.tabContent {
+                    min-height: 300px;
+
+                    >.content_item {
+                        display: none;
+
+                        &:first-child {
+                            display: block;
+                        }
+
+                        /*产品列表*/
+                        .proList {
+                            font-size: 0;
+
+                            >.proItem {
+                                display: inline-block;
+                                width: calc((100% - 60px) / 3);
+                                margin-right: 30px;
+                                margin-bottom: 30px;
+                                overflow: hidden;
+
+                                &:nth-child(3n+3) {
+                                    margin-right: 0;
+                                }
+
+                                >.proBox {
+                                    background-color: #fff;
+                                    transition: all ease-in-out .3s;
+
+                                    &:hover {
+                                        background-color: @btnColor;
+                                        background-color: var(--btnColor);
+                                    }
+
+                                    &:hover>.imgBox {
+                                        transform: translateY(-7%);
+                                    }
+
+                                    &:hover>.contentBox>.slideBox>.textBox .proTitle {
+                                        color: #fff;
+                                        transform: translateY(-60%);
+                                    }
+
+                                    &:hover>.contentBox>.slideBox>.textBox .proBtn {
+                                        background-color: #fff;
+                                        color: @btnColor;
+                                        color: var(--btnColor);
+                                    }
+
+                                    >.imgBox {
+                                        height: 0;
+                                        padding-bottom: 100%;
+                                        overflow: hidden;
+                                        transition: all ease-in-out .3s;
+
+                                        img {
+                                            width: 100%;
+                                        }
+                                    }
+
+                                    >.contentBox {
+                                        >.slideBox {
+                                            padding: 5% 0;
+
+                                            >.textBox {
+                                                h3 {
+                                                    font-size: 16px;
+                                                    font-weight: normal;
+                                                    text-align: center;
+                                                    transition: all ease-in-out .3s;
+
+                                                }
+
+                                                a.proBtn {
+                                                    display: block;
+                                                    width: 20px;
+                                                    margin: 3% auto 0;
+                                                    font-size: 14px;
+                                                    line-height: 20px;
+                                                    text-align: center;
+                                                    border-radius: 100%;
+                                                    background-color: #ff7f27;
+                                                    background-color: var(--btnColor);
+                                                    transition: all ease-in-out .3s;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+footer{
+    >.main {
+        padding-top: 3%;
+        padding-bottom: 3%;
+        background-color: @assistColor;
+        background-color: var(--assistColor);
+
+        >.gridBox {
+            >.gridCell {
+                vertical-align: top;
+
+                &:nth-child(1) {
+                    width: 40%;
+
+                    p {
+                        color: #ffffff;
+                        line-height: 2;
+
+                        a {
+                            color: #fff;
+                        }
+                    }
+                }
+
+                &:nth-child(2) {
+                    width: 60%;
+
+                    >.footerNav {
+                        >.yjBox {
+                            font-size: 0;
+                            color: #fff;
+
+                            >li {
+                                display: inline-block;
+                                width: calc(100% / 5);
+
+                                &:first-child{
+                                    display:none;
+                                }
+
+                                &:nth-last-child(2){
+                                    display:none;
+                                }
+
+                                &:last-child{
+                                    display:none;
+                                }
+
+                                >.yjTitle {
+                                    font-size: 16px;
+                                    font-weight: bold;
+                                }
+
+                                >.slideBox {
+                                    >.ejBox {
+                                        margin-top: 15px;
+
+                                        >li {
+                                            margin-top: 7px;
+
+                                            >.ejTitle {
+                                                font-size: 14px;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
